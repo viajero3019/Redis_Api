@@ -1,0 +1,21 @@
+dotnet new webapi -n Redis_API -f net6.0  
+
+### Executes containers and pulls them if not exist
+    docker compose up -d
+
+### Stops running containers
+    docker compose stop
+
+### Stops and deletes all the referenced containers
+    docker compose down
+
+### Ataches to the running container and interacts with it
+    docker exec -it <container_id> /bin/bash
+    redis-cli
+    ping
+    set platform:1010 docker
+    get platform:1010
+    exit
+
+
+dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis --version 6.0.2
